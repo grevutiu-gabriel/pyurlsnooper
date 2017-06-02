@@ -1,0 +1,106 @@
+#
+# This is the official homepage of PyURLSnooper, a program written to help users
+# locate the urls of audio and video files so that they can be recorded. This is
+# a OS independent equivalent of URL Snooper from http://www.donationcoder.com/. 
+#
+# This software is developed under linux (fedora) and until now tested under windows
+# only.
+#
+# Search for:
+# * URL Snooper (Windows)
+# * pcapy and ImpactDecoder
+# for further information.
+#
+#
+# ================================================================================
+# LICENCE
+#
+# This software is provided under under Public Domain. See the accompanying
+# license on https://sourceforge.net/projects/pyurlsnooper/ for more
+# information. Although SOME parts are released with following additional
+# restrictions:
+# --------------------------------------------------------------------------------
+# Copyright (c) 2003 CORE Security Technologies
+#
+# This software is provided under under a slightly modified version
+# of the Apache Software License. See the accompanying LICENSE file
+# for more information.
+#
+# Authors:
+#  Maximiliano Caceres <max@coresecurity.com>
+#  Javier Kohen <jkohen@coresecurity.com>
+#
+# Reference for:
+#  pcapy: findalldevs, open_live.
+#  ImpactDecoder.
+# --------------------------------------------------------------------------------
+# But the main script 'pyurlsnooper-gtk.py' is a re-write of those code lines
+# and therefore Public Domain.
+#
+#
+# ================================================================================
+# DOWNLOAD
+#
+# Official releases from:
+#  http://sourceforge.net/projects/pyurlsnooper/files/
+#
+# Browse SVN:
+#  http://pyurlsnooper.svn.sourceforge.net/viewvc/pyurlsnooper/
+# Latest (most recent) copy from SVN:
+#  svn co https://pyurlsnooper.svn.sourceforge.net/svnroot/pyurlsnooper pyurlsnooper 
+# More info about SVN:
+#  http://kb.gnuher.de/zzz_old_articles/various/HOWTO%20-%20SVN%20Kurzanleitung.txt
+#
+#
+# ================================================================================
+# INSTALLATION / SETUP
+# 
+# 1. step: (obviously you have to download this code)
+#
+# 2. step: if not alread present on your system install 'python'
+#
+# 3. step: install needed pakages for python, here is the list, you need to get
+#          the correct versions for your OS:
+#           * pcapy, impacket
+#             http://oss.coresecurity.com/projects/pcapy.html
+#             http://oss.coresecurity.com/projects/impacket.html
+#           * gtk, pygtk, pygobject and pycairo
+#           * wmi, libdnet (for windows and optional but very recommended)
+#             http://timgolden.me.uk/python/wmi/index.html
+#             http://libdnet.sourceforge.net/, http://libdnet.googlecode.com/files/dnet-1.12.win32-py2.5.exe
+#          (use 'python setup.py install' to install python modules from source)
+#
+# 4. step: open a terminal/shell and run the script you want with root or admin
+#          privileges:
+#           * linux: - run "su -c 'python pyurlsnooper-gtk.py'" to execute the
+#                      GTK/GUI script with root permissions
+#                    - run "su -c 'python pyurlsnooper.py'" to execute the
+#                      console script with root permissions (not recommended)
+#           * windows: - here you hvae to open command-line as administrator
+#                        already to execute the script with admin permissions,
+#                        then (or use "RunAs"):
+#                      - run "python pyurlsnooper-gtk.py" for GTK/GUI script
+#                      - run "python pyurlsnooper.py" for console script (not
+#                        recommended)
+#                      OR
+#                      - right-click on the script and choose to run as admin
+#
+# 5. step: enjoy the results, or PLEASE report me any bugs or problems (if you
+#          have no idea which network adapter to sniff, use 'any')
+#
+#
+# ================================================================================
+# ABOUT / INFO
+# 
+# Use either 'pyurlsnooper.py' which is a minimal terminal/shell script, that
+# prints everything to shell as well as it logs to a file. Or use the script
+# 'pyurlsnooper-gtk.py' which is a full GTK+/GNOME script with GUI and cross-
+# platform compatible for linux/win/mac. (it is tested on linux and windows 
+# only so far - but since Mac OS, BSD, ... are very similar to linux - python,
+# pcapy and pygtk should be available on or portable to all of those OSes, so
+# that should be no bigger problem!)
+#
+# If there is is any question or suggestion please contact me at sf.net, thanks!
+#
+
+

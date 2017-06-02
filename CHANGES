@@ -1,0 +1,70 @@
+#
+# TODO:
+#
+# * add/improve filterc e.g. free choosable filter string.
+# * enable catching of splitted (into multiple pakets) url strings.
+# * sniffe always from 'any' (or use multiple sniffer-threads under win) to establish
+#   full surveillance of all active connections at once.
+# * add copying of whole row/line to clipboard, if needed/wished/useful - maybe the
+#   best would be to add a config option to choose the default copy behaviour (and
+#   add additional menu items to copy 'url only', 'selected cell' or 'whole line').
+# * ...
+#
+#
+#
+# CHANGES:
+#
+# * Version 1.4:
+#   - Iconify/minimize to panel/tray enabled, since this is a sniffer and maybe you want
+#     to run it in background, without annoying window (1 option/setting added).
+#   - Smart filtering of invalid chars from urls introduced; for the moment invalid back-
+#     slashes (e.g. 'http:\\/\\/www...') are removed only (this done in GUI/display class
+#     to improve performance of sniffer class).
+#   - Copy only the selected cell/column (instead of full row/line) to clipboard.
+#   - BugFix: In "ext" column (client connection) was the wrong row toggled, when a filter
+#     i.e. rtmp was choosen. If no client is available a warning will be triggered.
+#   - Retrieve protocol info from url with urlparse standard module.
+#
+# * Version 1.3:
+#   - Callback GUI updating instead of own gtk-mainloop code works now (search e.g. for
+#     'gtk.gdk.threads_init()' and multi-threading to get more hints about this issue).
+#   - About dialog added.
+#   - Filter descriptions made more self-explanatory.
+#   - Configuration Dialog with combobox, spinentry, textentry and check/radio-button
+#     support added. 1 option/setting introduced.
+#   - Tested with other OS: Windows Vista (by using the module 'wmi' the script is able
+#     to resolve the adapter names, additionally 'dnet' helps to get even more info - the
+#     use of both modules is optional).
+#
+# * Version 1.2:
+#   - GTK/GUI script: enhanced info display in treeview (added 'Index', 'Protocol' and
+#     'Adapter' / added context popup-menu).
+#   - Autodetect network adapter and set (don't open) it as default on startup.
+#   - Return used network adapter from sniff (to get more info, if using 'any').
+#   - Improved treeview: drag'n'drop and normal URL searching (searching by 'Index' is
+#     useless!), gray display of duplicates, resizable/rearrangeable/sortable columns
+#     added/introduced.
+#   - Some new filters added: MP3 and WAV.
+#   - Code clean-up under addition of some comments.
+#   - Better error handling: exceptions from sniffer part are now caught and converted
+#     to warnings, all warnings are now gathered and sent to log-file (not console/shell
+#     anymore).
+#   - Window can now be resized and maximized, for a better outline.
+#   - New filtering method; all URLs are captured, but only the set according to the
+#     actual filter is displayed (drawback, if a filter is selected, sorting of columns
+#     is disabled).
+#
+# * Version 1.1:
+#   - This is the second release. Any suggestions and code snipplets are still
+#     welcome!
+#   - Most of the work was clean-up of code.
+#   - console script: appending to log-file, this way nothing gets lost/over-
+#     written.
+#   - GTK/GUI script: 'save' button added (forgot that in last release).
+#   - GTK/GUI script: statusbar with some messages added.
+#
+# * Version 1.0:
+#   - This is the first release. Any suggestions and code snipplets are welcome!
+#
+#
+
